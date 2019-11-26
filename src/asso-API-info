@@ -1,0 +1,32 @@
+
+window.arcIdentityApi
+$`{window.arcIdentityApi}/api/v1/modules`
+https://qa01-identity-api.arcoro.com/swagger/index.html
+
+ 
+
+application.shortName <- Use to switch brandhing, hrms, tna, tms_* (Birddog)
+
+ 
+
+window.arcAccessToken
+
+ 
+
+window.arcCurrentModule = hrms|tna|tms_tracking|tms_learning|tms_*
+
+ 
+
+
+var ctrl = new AssoMenu({
+    target: document.getLementById('menu"),
+    props: {
+            identityApi: window.arcIdentityApi,
+            accessToken: window.arcAccessToken,
+            currentModule: window.arcCurrentModule
+        }
+})
+
+ 
+
+*Cache results of API call in localStorage/sessionStorage, whichever is less persistent
